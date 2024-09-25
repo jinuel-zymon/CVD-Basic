@@ -128,6 +128,8 @@ img {
 /* HEADER */
 .header {
   background: var(--dark);
+  position:fixed;
+  width:100%;
 }
 
 /* name of section - immediate parent - target */
@@ -191,16 +193,90 @@ img {
 .toggle__menu.open span:nth-child(2){
   opacity:0;
 }
+.header .header__nav.open{
+  right:0rem;
+  transition:.5s ease;
+}
 
 /* mobile view */
 @media screen and (max-width:500px){
+    .header .branding h3 {
+      font-size:2rem;
+    }
+    .header .branding img{
+      width:5rem;
+    }
     .header .header__nav {
-      display:none;
+      background:gray;
+      position: absolute;
+      top:8rem;
+      right:-100rem;
+      width:100%;
+      height:100vh;
+      transition:.5s ease;
+    }
+    .header .header__nav ul {
+      display:flex;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(10rem);
+      gap: 1rem;
+    }
+    .header .header__nav ul li a{
+      display:inline-block;
+      width: 15rem;
+      padding:1rem 0;
+      font-size: 2.5rem;
+    }
+    .header .header__nav ul li a:hover{
+      background: var(--light);
     }
     .toggle__menu{
       display:block;
     }
 }
+
+/* BANNER */
+.banner{
+  background: var(--light);
+  padding-top: 13rem;
+  padding-bottom: 5rem;
+}
+
+.banner .banner__wrapper {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner .banner__text h1{
+  color:var(--primary);
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.banner .banner__text p{
+  margin:5rem 0;
+  max-width: 40rem;
+  text-align: justify;
+}
+@media screen and (max-width:500px){
+  .banner .banner__wrapper{
+    display:flex;
+    flex-direction: column-reverse;
+  }
+  .banner img {
+    width:20rem;
+  }
+  .banner .banner__text {
+    text-align:center;
+  }
+  .banner .banner__text h1{
+    font-size: 3rem;
+    margin-top:5rem;
+  }
+
+  }
+
 
 /*REPEATABLE PATTERNS*/
 :root {
@@ -209,3 +285,26 @@ img {
   --dark: #2b2b2b;
   --transparent: transparent;
 }
+.btn{
+  display:inline-block;
+  padding:1.5rem 2rem;
+  border-radius: 5rem;
+  font-weight: 600;
+  border:1px solid transparent
+}
+.btn.bg--primary{
+  background:var(--primary);
+  color:var(--light);
+}
+.btn.bg--primary:hover{
+  background: var(--dark);
+}
+.btn.bg--dark{
+  background:var(--dark);
+  color:var(--light);
+}
+.btn.bg--dark:hover{
+  background:var(--light);
+  color:var(--dark);
+}
+
