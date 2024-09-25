@@ -133,6 +133,10 @@ img {
 }
 
 /* name of section - immediate parent - target */
+.header .header__nav ul li.active a{
+  color:var(--primary);
+}
+
 .header .branding h3 {
   color: var(--light);
   font-size:2.5rem;
@@ -465,6 +469,28 @@ img {
   }
 
 }
+
+/*ABOUT BANNER */
+.abt--banner{
+  background: var(--light);
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+.abt--banner .abt--banner__wrap {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abt--banner .abt--banner__text p{
+  margin:5rem 0;
+  max-width: 40rem;
+  text-align: justify;
+}
+
+
+
+
 
 
 
