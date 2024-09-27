@@ -470,7 +470,6 @@ img {
   }
 }
 
-
 /* ABOUT PAGE */
 /*ABOUT BANNER SECTION*/
 .abt-banner {
@@ -584,86 +583,221 @@ img {
   }
 }
 
-
 /* SERVICES PAGE */
 /* WEB DESIGN & DEVELOPMENT SECTION */
-.webdd {
-  display:flex;
-  flex-direction: column;
+.services {
+  padding-top: 10rem;
 }
-
-.webdd .webdd_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20rem;
-  margin-left:auto;
-  margin-right:auto;
+.services .services__card {
+  padding-top: 5rem;
+  text-align: center;
+}
+.services .services__card:nth-child(odd) {
   background: var(--light);
 }
-.webdd .webdd_text {
-padding-right:5rem;
-padding-left:5rem;
+.services .services__card:nth-child(even) {
+  background: var(--dark);
 }
-.webdd img {
-  padding-left:5rem;
-  padding-right:5rem;
+
+.services .services__card:nth-child(odd) .services__item {
+  display: flex;
 }
-.webdd .webdd_text h1 {
-  display:flex;
-  align-items: flex-start;
+.services .services__card:nth-child(even) .services__item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.services .services__item {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .item__left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 3rem;
+}
+.services .services__card:nth-child(odd) .item__right {
+  justify-content: flex-end;
+}
+.services .services__card:nth-child(even) .item__right {
+  justify-content: flex-start;
+}
+.services .item__left h1 {
   color: var(--primary);
-  font-size: 4.9rem;
-  font-weight: 800;
-  margin-top: -1.9rem;
-  margin-bottom: 1rem;
+  font-size: 5rem;
+  font-weight: 600;
 }
-.webdd .webdd_text p {
-  margin: 3rem 0;
+.services .services__card:nth-child(odd) .item__left h1 {
   max-width: 40rem;
+}
+.services .services__card:nth-child(even) .item__left h1 {
+  max-width: 40rem;
+}
+.services .item__left p {
+  color: var(--dark);
   text-align: justify;
-  font-weight: 400;
+  max-width: 50rem;
 }
-.webdd .webdd_price p:nth-last-child(4) {
-  color:var(--dark);
-  font-weight: bold;
-  margin: 0;
+.services .services__card:nth-child(odd) .item__left p {
+  color: var(--dark);
 }
-.webdd .webdd_price p:nth-last-child(3) {
-  color:var(--primary);
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
+.services .services__card:nth-child(even) .item__left p {
+  color: var(--light);
 }
-.webdd .webdd_price p:nth-last-child(2) {
-  font-size:1.2rem;
-  font-style:italic;
-  margin:0;
+
+.services .services__card:nth-child(odd) .item__left .services__price p {
+  color: var(--dark);
 }
-.webdd .webdd_price p:last-child {
-  font-size:1.2rem;
-  font-style:italic;
-  margin:0;
+.services .services__card:nth-child(even) .item__left .services__price p {
+  color: var(--light);
 }
-.webdd .webdd_wrapper2 {
-  padding: 0;
-  text-align: center;
-  margin:4rem auto;
+.services .services__price h5 {
+  font-size: 1.5rem;
 }
-.webdd .webdd_wrapper2 a i {
-  font-size: 3.9rem;
+
+.services .services__card:nth-child(odd) .services__price h5 {
+  color: var(--dark);
+}
+.services .services__card:nth-child(even) .services__price h5 {
+  color: var(--light);
+}
+
+.services .services__price h3 {
   color: var(--primary);
+  font-size: 2.5rem;
+}
+.services .services__price h6 {
+  font-size: 1rem;
+  font-style: italic;
+}
+.services .services__card:nth-child(even) .item__left .services__price h6 {
+  color: var(--dark);
+}
+.services .services__card:nth-child(even) .item__left .services__price h6 {
+  color: var(--light);
+}
+.services .services__card a i {
+  font-size: 4rem;
+  color: var(--primary);
+  padding-bottom: 5rem;
+}
+.services .services__card:last-child a i {
+  display: none;
 }
 @media screen and (max-width: 500px) {
-  .webdd .webdd_wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top:-3rem;
+  .services .item__left {
+    width: auto;
   }
-  .webdd .webdd_text h1:first-child {
-    margin-top: 3rem;
+  .services .item__left h1 {
+    text-align: center;
+  }
+  .services .services__card:nth-child(odd) .services__item {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .services .services__card:nth-child(even) .services__item {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contact .contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
+
+/* CONTACT */
+.contact {
+  background: var(--dark);
+}
+.contact h1 {
+  padding-top: 20rem;
+  font-size:5rem;
+  color:var(--primary);
+  font-weight: 600;
+}
+.contact .contact__text p, 
+.contact .contact__text table tr td:last-child{
+  color: var(--light);
+}
+.contact .contact__text table tr td:first-child{
+  color: var(--primary);
+  font-size: 3rem;
+  width: 7rem;
+}
+.contact .contact__text p {
+  padding-bottom:7rem;
+}
+.contact .contact__text table tr {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+.contact .contact__wrapper {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap:20rem;
+  padding: 5rem 0;
+}
+.contact ul.contact__social {
+  display: flex;
+  gap:3rem;
+  margin-top:5rem;
+}
+.contact ul.contact__social li a {
+  color:var(--light);
+  font-size: 2.5rem;
+}
+.contact form .form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+}
+.contact form .form__inputs input{
+  padding:2rem 3rem;
+}
+.contact form .form__inputs textarea {
+  padding:2rem 3rem;
+  resize: none;
+  height: 20rem;
+}
+.contact form .contact__btn {
+  margin-top: 3rem;
+  text-align: right;
+}
+@media screen and (max-width: 500px) {
+  .contact .contact__wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+    padding:0 4rem;
+  }
+  .contact h1{
+    padding-top: 15rem;
+    text-align: center;
+  }
+  .contact .contact__text p {
+    padding:3rem 0;
+    text-align: center;
+  }
+  .contact ul.contact__social{
+    justify-content: center;
+  }
+  .contact form .contact__btn {
+    text-align: center;
+  }
+  .contact form .contact__btn a{
+    width: 100%;
+  }
+}
+
+
 
 
 /*REPEATABLE PATTERNS*/
@@ -694,4 +828,11 @@ padding-left:5rem;
 .btn.bg--dark:hover {
   background: var(--light);
   color: var(--dark);
+}
+/* yung class header na may id contact header */
+.header#contact-header {
+  box-shadow: rgb(0, 0, 0) 0px 10px 20px -10px;
+}
+.footer#contact-footer {
+  border-top: 1px solid gray;
 }
