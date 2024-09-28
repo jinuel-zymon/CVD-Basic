@@ -470,7 +470,6 @@ img {
   }
 }
 
-
 /* ABOUT PAGE */
 /*ABOUT BANNER SECTION*/
 .abt-banner {
@@ -584,90 +583,221 @@ img {
   }
 }
 
-
 /* SERVICES PAGE */
 /* WEB DESIGN & DEVELOPMENT SECTION */
 .services {
-  padding-top: 11.2rem;
+  padding-top: 10rem;
+}
+.services .services__card {
+  padding-top: 5rem;
+  text-align: center;
+}
+.services .services__card:nth-child(odd) {
+  background: var(--light);
+}
+.services .services__card:nth-child(even) {
+  background: var(--dark);
 }
 
-.services .services__card {
-  background-color: var(--light);
+.services .services__card:nth-child(odd) .services__item {
+  display: flex;
+}
+.services .services__card:nth-child(even) .services__item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.services .services__item {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .item__left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10rem;
-  padding: 15rem 0;
+  text-align: left;
+  gap: 3rem;
 }
-
-.services .services__card:nth-child(even) {
-  background-color: var(--dark);
+.services .services__card:nth-child(odd) .item__right {
+  justify-content: flex-end;
 }
-
-.services .services__card:nth-child(even) .services__items {
-  flex-direction: row-reverse;
+.services .services__card:nth-child(even) .item__right {
+  justify-content: flex-start;
+}
+.services .item__left h1 {
+  color: var(--primary);
+  font-size: 5rem;
+  font-weight: 600;
+}
+.services .services__card:nth-child(odd) .item__left h1 {
+  max-width: 40rem;
+}
+.services .services__card:nth-child(even) .item__left h1 {
+  max-width: 40rem;
+}
+.services .item__left p {
+  color: var(--dark);
+  text-align: justify;
+  max-width: 50rem;
+}
+.services .services__card:nth-child(odd) .item__left p {
+  color: var(--dark);
+}
+.services .services__card:nth-child(even) .item__left p {
   color: var(--light);
 }
 
-.services .services__card:nth-child(even) .services__right img:last-child {
-  display: none;
+.services .services__card:nth-child(odd) .item__left .services__price p {
+  color: var(--dark);
+}
+.services .services__card:nth-child(even) .item__left .services__price p {
+  color: var(--light);
+}
+.services .services__price h5 {
+  font-size: 1.5rem;
 }
 
-.services .services__card a {
+.services .services__card:nth-child(odd) .services__price h5 {
+  color: var(--dark);
+}
+.services .services__card:nth-child(even) .services__price h5 {
+  color: var(--light);
+}
+
+.services .services__price h3 {
+  color: var(--primary);
+  font-size: 2.5rem;
+}
+.services .services__price h6 {
+  font-size: 1rem;
+  font-style: italic;
+}
+.services .services__card:nth-child(even) .item__left .services__price h6 {
+  color: var(--dark);
+}
+.services .services__card:nth-child(even) .item__left .services__price h6 {
+  color: var(--light);
+}
+.services .services__card a i {
   font-size: 4rem;
   color: var(--primary);
-  margin:-6rem 0;
+  padding-bottom: 5rem;
 }
-.services .services__card:last-child a {
+.services .services__card:last-child a i {
   display: none;
 }
-.services .services__items {
-  max-width: 120rem;
-  margin: 0 auto;
+@media screen and (max-width: 500px) {
+  .services .item__left {
+    width: auto;
+  }
+  .services .item__left h1 {
+    text-align: center;
+  }
+  .services .services__card:nth-child(odd) .services__item {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .services .services__card:nth-child(even) .services__item {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contact .contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* CONTACT */
+.contact {
+  background: var(--dark);
+}
+.contact h1 {
+  padding-top: 20rem;
+  font-size:5rem;
+  color:var(--primary);
+  font-weight: 600;
+}
+.contact .contact__text p, 
+.contact .contact__text table tr td:last-child{
+  color: var(--light);
+}
+.contact .contact__text table tr td:first-child{
+  color: var(--primary);
+  font-size: 3rem;
+  width: 7rem;
+}
+.contact .contact__text p {
+  padding-bottom:7rem;
+}
+.contact .contact__text table tr {
+  height: 8rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 15rem;
 }
-.services .items__left {
-  width: 50%;
+.contact .contact__wrapper {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap:20rem;
+  padding: 5rem 0;
+}
+.contact ul.contact__social {
+  display: flex;
+  gap:3rem;
+  margin-top:5rem;
+}
+.contact ul.contact__social li a {
+  color:var(--light);
+  font-size: 2.5rem;
+}
+.contact form .form__inputs {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap:3rem;
 }
-.services .services__items h1 {
-  color: var(--primary);
-  font-size: 7rem;
-  font-weight: 700;
- 
+.contact form .form__inputs input{
+  padding:2rem 3rem;
 }
-.services .items__left p {
-  text-align: justify;
+.contact form .form__inputs textarea {
+  padding:2rem 3rem;
+  resize: none;
+  height: 20rem;
+}
+.contact form .contact__btn {
+  margin-top: 3rem;
+  text-align: right;
+}
+@media screen and (max-width: 500px) {
+  .contact .contact__wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+    padding:0 4rem;
+  }
+  .contact h1{
+    padding-top: 15rem;
+    text-align: center;
+  }
+  .contact .contact__text p {
+    padding:3rem 0;
+    text-align: center;
+  }
+  .contact ul.contact__social{
+    justify-content: center;
+  }
+  .contact form .contact__btn {
+    text-align: center;
+  }
+  .contact form .contact__btn a{
+    width: 100%;
+  }
 }
 
-.services .items__right {
-  width: 50%;
-}
 
-.services .services__prices {
-  width: 18rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.services .services__prices h3 {
-  color: var(--primary);
-}
-
-.services .services__prices h5 {
-  font-style: italic;
-  font-size: 1rem;
-}
-
-.services .items__right img {
-  width: 100%;
-}
 
 
 /*REPEATABLE PATTERNS*/
@@ -698,4 +828,11 @@ img {
 .btn.bg--dark:hover {
   background: var(--light);
   color: var(--dark);
+}
+/* yung class header na may id contact header */
+.header#contact-header {
+  box-shadow: rgb(0, 0, 0) 0px 10px 20px -10px;
+}
+.footer#contact-footer {
+  border-top: 1px solid gray;
 }
