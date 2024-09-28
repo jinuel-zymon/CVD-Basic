@@ -587,82 +587,86 @@ img {
 
 /* SERVICES PAGE */
 /* WEB DESIGN & DEVELOPMENT SECTION */
-.webdd {
-  display:flex;
-  flex-direction: column;
+.services {
+  padding-top: 11.2rem;
 }
 
-.webdd .webdd_wrapper {
+.services .services__card {
+  background-color: var(--light);
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 10rem;
+  padding: 15rem 0;
+}
+
+.services .services__card:nth-child(even) {
+  background-color: var(--dark);
+}
+
+.services .services__card:nth-child(even) .services__items {
+  flex-direction: row-reverse;
+  color: var(--light);
+}
+
+.services .services__card:nth-child(even) .services__right img:last-child {
+  display: none;
+}
+
+.services .services__card a {
+  font-size: 4rem;
+  color: var(--primary);
+  margin:-6rem 0;
+}
+.services .services__card:last-child a {
+  display: none;
+}
+.services .services__items {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
-  margin-top: 20rem;
-  margin-left:auto;
-  margin-right:auto;
-  background: var(--light);
+  align-items: center;
+  gap: 15rem;
 }
-.webdd .webdd_text {
-padding-right:5rem;
-padding-left:5rem;
+.services .items__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
-.webdd img {
-  padding-left:5rem;
-  padding-right:5rem;
-}
-.webdd .webdd_text h1 {
-  display:flex;
-  align-items: flex-start;
+.services .services__items h1 {
   color: var(--primary);
-  font-size: 4.9rem;
-  font-weight: 800;
-  margin-top: -1.9rem;
-  margin-bottom: 1rem;
+  font-size: 7rem;
+  font-weight: 700;
+ 
 }
-.webdd .webdd_text p {
-  margin: 3rem 0;
-  max-width: 40rem;
+.services .items__left p {
   text-align: justify;
-  font-weight: 400;
 }
-.webdd .webdd_price p:nth-last-child(4) {
-  color:var(--dark);
-  font-weight: bold;
-  margin: 0;
+
+.services .items__right {
+  width: 50%;
 }
-.webdd .webdd_price p:nth-last-child(3) {
-  color:var(--primary);
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
+
+.services .services__prices {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
-.webdd .webdd_price p:nth-last-child(2) {
-  font-size:1.2rem;
-  font-style:italic;
-  margin:0;
-}
-.webdd .webdd_price p:last-child {
-  font-size:1.2rem;
-  font-style:italic;
-  margin:0;
-}
-.webdd .webdd_wrapper2 {
-  padding: 0;
-  text-align: center;
-  margin:4rem auto;
-}
-.webdd .webdd_wrapper2 a i {
-  font-size: 3.9rem;
+
+.services .services__prices h3 {
   color: var(--primary);
 }
-@media screen and (max-width: 500px) {
-  .webdd .webdd_wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top:-3rem;
-  }
-  .webdd .webdd_text h1:first-child {
-    margin-top: 3rem;
-  }
+
+.services .services__prices h5 {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.services .items__right img {
+  width: 100%;
 }
 
 
