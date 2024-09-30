@@ -490,7 +490,6 @@ img {
   font-size: 1.7rem;
   font-weight: 400;
   margin: 0;
-  
 }
 .abt-banner .abtbanner_text h1 {
   color: var(--primary);
@@ -509,7 +508,6 @@ img {
   display: flex;
   gap: 2rem;
   margin-top: 5rem;
-  
 }
 .abt-banner .abtbanner_social ul li a {
   color: var(--primary);
@@ -726,21 +724,21 @@ img {
 }
 .contact h1 {
   padding-top: 20rem;
-  font-size:5rem;
-  color:var(--primary);
+  font-size: 5rem;
+  color: var(--primary);
   font-weight: 600;
 }
-.contact .contact__text p, 
-.contact .contact__text table tr td:last-child{
+.contact .contact__text p,
+.contact .contact__text table tr td:last-child {
   color: var(--light);
 }
-.contact .contact__text table tr td:first-child{
+.contact .contact__text table tr td:first-child {
   color: var(--primary);
   font-size: 3rem;
   width: 7rem;
 }
 .contact .contact__text p {
-  padding-bottom:7rem;
+  padding-bottom: 7rem;
 }
 .contact .contact__text table tr {
   height: 8rem;
@@ -748,31 +746,31 @@ img {
   align-items: center;
 }
 .contact .contact__wrapper {
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  grid-gap:20rem;
+  grid-gap: 20rem;
   padding: 5rem 0;
 }
 .contact ul.contact__social {
   display: flex;
-  gap:3rem;
-  margin-top:5rem;
+  gap: 3rem;
+  margin-top: 5rem;
 }
 .contact ul.contact__social li a {
-  color:var(--light);
+  color: var(--light);
   font-size: 2.5rem;
 }
 .contact form .form__inputs {
   display: flex;
   flex-direction: column;
-  gap:3rem;
+  gap: 3rem;
 }
-.contact form .form__inputs input{
-  padding:2rem 3rem;
+.contact form .form__inputs input {
+  padding: 2rem 3rem;
 }
 .contact form .form__inputs textarea {
-  padding:2rem 3rem;
+  padding: 2rem 3rem;
   resize: none;
   height: 20rem;
 }
@@ -781,27 +779,27 @@ img {
   text-align: right;
 }
 @media screen and (max-width: 500px) {
-  .contact .contact__wrapper{
+  .contact .contact__wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5rem;
-    padding:0 4rem;
+    padding: 0 4rem;
   }
-  .contact h1{
+  .contact h1 {
     padding-top: 15rem;
     text-align: center;
   }
   .contact .contact__text p {
-    padding:3rem 0;
+    padding: 3rem 0;
     text-align: center;
   }
-  .contact ul.contact__social{
+  .contact ul.contact__social {
     justify-content: center;
   }
   .contact form .contact__btn {
     text-align: center;
   }
-  .contact form .contact__btn a{
+  .contact form .contact__btn a {
     width: 100%;
   }
 }
@@ -812,10 +810,10 @@ img {
   padding-top: 14rem;
   padding-bottom: 9rem;
 }
-.updates .updates__wrapper{
-  display:grid;
+.updates .updates__wrapper {
+  display: grid;
   grid-template-columns: 2.5fr 1fr;
-  gap:5rem;
+  gap: 5rem;
 }
 .updates .updates__title {
   margin-bottom: 6rem;
@@ -827,53 +825,67 @@ img {
 }
 .updates hr {
   display: block;
-  margin:1rem 0;
+  margin: 1rem 0;
   border-style: none;
   border-width: 1px;
-  border-color:#F0F0F0;
-  background:#F0F0F0;
+  border-color: #f0f0f0;
+  background: #f0f0f0;
   height: 2.5px;
 }
 .updates .updates__card {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:2rem;
+  gap: 2rem;
+}
+.updates .updates__card:not(:last-child) {
+  border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+  padding: 5rem 0;
+}
+.updates .updates__card:first-child {
+  padding-top: 0rem;
+  padding-bottom: 8rem;
+}
+.updates .updates__card:last-child {
+  padding: 5rem 0;
 }
 .updates .updates__title h2 {
   color: var(--primary);
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 900;
+}
+.updates .updates__title p {
+  font-size: 2.5rem;
 }
 .updates .upd__card__infos ul {
   display: flex;
-  gap:4.5rem;
+  gap: 4.5rem;
 }
 
 .updates .upd__card__infos ul a {
-  color:black;
+  color: black;
   font-size: 1.1rem;
   display: flex;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   font-weight: bold;
 }
 .updates .updates__card h4 {
   color: var(--primary);
-  font-size:2.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 .updates .updates__card p {
-  padding:0.6rem 0;
+  padding: 0.6rem 0;
 }
-.updates .updates__card h5{
+.updates .updates__card h5 {
   color: var(--primary);
 }
+
 .updates .updates__right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
-.updates .updates__right h3 {
+/* .updates .updates__right h3 {
   color: var(--primary);
   font-size: 2rem;
   font-weight: 600;
@@ -882,18 +894,19 @@ img {
 .updates .upd__category table tr {
   height: 4rem;
 }
-.updates .upd__category table tr td:first-child{
+.updates .upd__category table tr td:first-child {
   width: 100%;
 }
 .updates .upd__post__wrapper {
   display: flex;
   flex-direction: column;
-  gap:3rem;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 .updates .upd__post__card {
   display: flex;
-  gap:2rem;
-  background: #F8F8F8;
+  gap: 2rem;
+  background: #f8f8f8;
 }
 .updates .upd__post__card__text {
   display: flex;
@@ -904,17 +917,89 @@ img {
   font-weight: bold;
 }
 .updates .upd__tag__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+} */
+
+.updates .upd__right__item {
+  display: flex;
+  flex-direction: column;
 }
+.updates .upd__right__item:not(:last-child) {
+  border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+}
+.updates .upd__right__item:not(:first-child),
+.updates .upd__right__item:not(:last-child) {
+  padding: 8rem 0;
+}
+.updates .upd__right__item:first-child {
+  padding-top: 0;
+  padding-bottom: 8rem;
+}
+
+.updates .upd__right__item h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.updates .upd__right__item table tr {
+  height: 4rem;
+}
+.updates .upd__right__item table tr td:first-child {
+  width: 100%;
+}
+.updates .upd__blog {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+.updates .upd__blog__item {
+  display: flex;
+  gap: 2rem;
+  background: #f8f8f8;
+}
+.updates .upd__blog__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.updates .upd__blog__text h4 {
+  font-weight: bold;
+}
+.updates .upd__right__item ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 @media screen and (max-width: 500px) {
   .updates .updates__wrapper {
     grid-template-columns: 1fr;
   }
+  .updates .updates__title {
+    text-align: center;
+  }
+  .updates .updates__card {
+    align-items: center;
+  }
+  .updates .upd__card__infos {
+    width: 100%;
+  }
+  .updates .upd__card__infos ul {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .updates .upd__right__item h3 {
+    text-align: center;
+  }
+  .updates .upd__right__item ul {
+    padding: 1rem;
+    justify-content: center;
+  }
 }
-
-
 
 /*REPEATABLE PATTERNS*/
 :root {
@@ -948,7 +1033,7 @@ img {
 .btn.bg--light {
   background: var(--light);
   color: var(--dark);
-  border:2px solid var(--dark);
+  border: 2px solid var(--dark);
 }
 .btn.bg--light:hover {
   background: var(--dark);
